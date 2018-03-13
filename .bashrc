@@ -19,6 +19,11 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# History settings
+export HISTCONTROL=ignoredups # Don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoreboth # Ignore same sucessive entries.
+export HISTIGNORE="ls:[bf]g:exit:l:sl:ll:llg"
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
